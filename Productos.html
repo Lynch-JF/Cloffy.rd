@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda Online/Cloffy.rd</title>
+  <link rel="stylesheet" href="CSS/Card-product.css">
+  <link rel="stylesheet" href="CSS/Css.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="IMG/Logo san valentin.jpeg" style="width:125%; height: 120%; margin-left: -23%;" alt="Cloffy Elegance & Style">
+        </div>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Buscar...">
+            <button onclick="searchProducts()">Buscar</button>
+        </div>
+
+        <div class="cart-display" id="cartDisplay">
+            <h2>Carrito de Compras</h2>
+            <ul id="cartItems">
+                <!-- Aquí se mostrarán los artículos agregados al carrito -->
+            </ul>
+            <button onclick="clearCart()">Vaciar Carrito</button>
+        </div>
+    
+        <button class="floating-cart" onclick="toggleCart()">🛒</button>
+    
+    </header>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="nav-container">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#">Productos</a></li>
+                <li class="dropdown">
+                    <a href="#">Servicios</a>
+                    <ul class="dropdown-content">
+                        <li><a href="https://wa.me/18292685367?text=I'm%20interested%20in%20your%20car%20for%20sale">WhatsApp</a></li>
+                        <li><a href="https://www.instagram.com/cloffy.rd?igsh=NHowMG9nczYyeThj">Instagram</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main id="productContainer">
+        <div class="card" data-name="Pulceras para chicas">
+            <img src="IMG/cadenas.jpeg" alt="Producto 1">
+            <h3> Pulceras para chicas</h3>
+            <p>Pulceras en estilos de flores, gemas y lisas.</p>
+            <button onclick="addToCart('Pulceras para chicas')">Agregar al carrito</button>
+            <button onclick="viewMore('Producto 1')">Ver más</button>
+        </div>
+        <div class="card" data-name="Cadenitas">
+            <img src="IMG/cadenas en formas.jpeg" alt="Producto 2">
+            <h3>Cadenitas</h3>
+            <p>Cadenitas con diferentes formas</p>
+            <button onclick="addToCart('Cadenitas')">Agregar al carrito</button>
+            <button onclick="viewMore('Producto 2')">Ver más</button>
+        </div>
+
+        <div class="card" data-name="Argollas">
+            <img src="IMG/argollas.jpeg" alt="Producto 2">
+            <h3>Argollas</h3>
+            <p>Argollas-arretes para lucir elegates</p>
+            <button onclick="addToCart('Argollas')">Agregar al carrito</button>
+            <button onclick="viewMore('Producto 2')">Ver más</button>
+        </div>
+
+        <div class="card" data-name="Artes">
+            <img src="IMG/argollas.jpeg" alt="Producto 2">
+            <h3>Aretes</h3>
+            <p>Argollas-arretes para lucir elegates</p>
+            <button onclick="addToCart('Argollas')">Agregar al carrito</button>
+            <button onclick="viewMore('Producto 2')">Ver más</button>
+        </div>
+        <div class="card" data-name="Guillos">
+            <img src="IMG/argollas.jpeg" alt="Producto 2">
+            <h3>Guillos</h3>
+            <p>Argollas-arretes para lucir elegates</p>
+            <button onclick="addToCart('Argollas')">Agregar al carrito</button>
+            <button onclick="viewMore('Producto 2')">Ver más</button>
+        </div>
+        <div class="card" data-name="Anillos">
+            <img src="IMG/argollas.jpeg" alt="Producto 2">
+            <h3>Anillos</h3>
+            <p>Argollas-arretes para lucir elegates</p>
+            <button onclick="addToCart('Argollas')">Agregar al carrito</button>
+            <button onclick="viewMore('Producto 2')">Ver más</button>
+        </div>
+        <div class="card" data-name="Collar">
+            <img src="IMG/argollas.jpeg" alt="Producto 2">
+            <h3>Collares</h3>
+            <p>Argollas-arretes para lucir elegates</p>
+            <button onclick="addToCart('Argollas')">Agregar al carrito</button>
+            <button onclick="viewMore('Producto 2')">Ver más</button>
+        </div>
+        <div class="card" data-name="Bodys">
+            <img src="IMG/argollas.jpeg" alt="Producto 2">
+            <h3>Bodys</h3>
+            <p>Argollas-arretes para lucir elegates</p>
+            <button onclick="addToCart('Argollas')">Agregar al carrito</button>
+            <button onclick="viewMore('Producto 2')">Ver más</button>
+        </div>
+        <div class="card" data-name="Tops">
+            <img src="IMG/argollas.jpeg" alt="Producto 2">
+            <h3>Tops</h3>
+            <p>Argollas-arretes para lucir elegates</p>
+            <button onclick="addToCart('Argollas')">Agregar al carrito</button>
+            <button onclick="viewMore('Producto 2')">Ver más</button>
+        </div>
+        <div class="card" data-name="Sets">
+            <img src="IMG/argollas.jpeg" alt="Producto 2">
+            <h3>Sets</h3>
+            <p>Argollas-arretes para lucir elegates</p>
+            <button onclick="addToCart('Argollas')">Agregar al carrito</button>
+            <button onclick="viewMore('Producto 2')">Ver más</button>
+        </div>
+        <div class="card" data-name="Combos temporada">
+            <img src="IMG/argollas.jpeg" alt="Producto 2">
+            <h3>Combos temporada</h3>
+            <p>Argollas-arretes para lucir elegates</p>
+            <button onclick="addToCart('Argollas')">Agregar al carrito</button>
+            <button onclick="viewMore('Producto 2')">Ver más</button>
+        </div>
+        
+        <!-- Agrega más cards según sea necesario -->
+    </main>
+
+    <script src="JS/JS.JS"></script>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>Cloffy Elegance & Style</h3>
+                <p class="slogan">"Viste tu esencia, adorna tu alma. Donde la moda se encuentra con la eternidad."</p>
+            </div>
+            <div class="footer-section links">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="Productos.html">Productos</a></li>
+                    <li><a href="https://www.instagram.com/cloffy.rd?igsh=NHowMG9nczYyeThj">Servicios</a></li>
+                    <li><a href="https://wa.me/18292685367?text=I'm%20interested%20in%20your%20car%20for%20sale">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-section social">
+                <h3>Síguenos</h3>
+                <ul>
+                    <li><a href="https://www.instagram.com/cloffy.rd?igsh=NHowMG9nczYyeThj" target="_blank">Instagram</a></li>
+                    <li><a href="https://wa.me/18292685367?text=I'm%20interested%20in%20your%20car%20for%20sale" target="_blank">WhatsApp</a></li>
+               
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Cloffy Elegance & Style. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
