@@ -36,23 +36,25 @@
         </div>
     </nav>
 
-    <div class="cart-display" id="cartDisplay">
+     <!-- Carrito de compras -->
+     <div class="cart-display" id="cartDisplay">
         <h2>Carrito de Compras</h2>
         <ul id="cartItems">
             <!-- Aquí se mostrarán los artículos agregados al carrito -->
         </ul>
+        <p>Total: $<span id="totalAmount">0.00</span></p>
         <button onclick="clearCart()">Vaciar Carrito</button>
     </div>
 
+    <!-- Botón flotante del carrito -->
     <button class="floating-cart" onclick="toggleCart()">🛒</button>
-
     <main id="productContainer">
-        <div class="card" data-name="Pulceras para chicas">
-            <img src="IMG/cadenas.jpeg" alt="Producto 1">
-            <h3> Pulceras para chicas</h3>
+        <div class="card" data-name="Pulceras para chicas" data-price="10">
+            <img src="IMG/cadenas.jpeg" alt="Pulceras para chicas">
+            <h3>Pulceras para chicas</h3>
             <p>Pulceras en estilos de flores, gemas y lisas.</p>
-            <button onclick="addToCart('Pulceras para chicas')">Agregar al carrito</button>
-            <button onclick="viewMore('Producto 1')">Ver más</button>
+            <button onclick="addToCart('Pulceras para chicas', 10)">Agregar al carrito</button>
+            <button onclick="viewMore('Pulceras para chicas')">Ver más</button>
         </div>
         <div class="card" data-name="Cadenitas">
             <img src="IMG/cadenas en formas.jpeg" alt="Producto 2">

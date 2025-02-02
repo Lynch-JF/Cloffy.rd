@@ -66,9 +66,7 @@ nav ul li a {
 .dropdown:hover .dropdown-content {
     display: block;
 }
-.dropdown:hover{
-    background-color: rosybrown;
-}
+
 
 .cart-display {
     display: none;

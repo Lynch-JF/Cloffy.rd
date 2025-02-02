@@ -1,3 +1,7 @@
+// Variables para el carrito
+let cart = [];
+let totalAmount = 0;
+
 // Función para buscar productos
 function searchProducts() {
     const searchTerm = document.getElementById('searchInput').value.toLowerCase();
@@ -20,17 +24,36 @@ function toggleCart() {
 }
 
 // Función para agregar productos al carrito
-function addToCart(productName) {
+function addToCart(productName, price) {
+    cart.push({ name: productName, price: price });
+    totalAmount += price;
+    updateCartDisplay();
+}
+
+// Función para actualizar la visualización del carrito
+function updateCartDisplay() {
     const cartItems = document.getElementById('cartItems');
-    const li = document.createElement('li');
-    li.textContent = productName;
-    cartItems.appendChild(li);
+    const totalAmountElement = document.getElementById('totalAmount');
+
+    // Limpiar la lista de productos
+    cartItems.innerHTML = '';
+
+    // Agregar cada producto al carrito
+    cart.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = `${item.name} - $${item.price.toFixed(2)}`;
+        cartItems.appendChild(li);
+    });
+
+    // Actualizar el total
+    totalAmountElement.textContent = totalAmount.toFixed(2);
 }
 
 // Función para vaciar el carrito
 function clearCart() {
-    const cartItems = document.getElementById('cartItems');
-    cartItems.innerHTML = '';
+    cart = [];
+    totalAmount = 0;
+    updateCartDisplay();
 }
 
 // Función para ver más detalles del producto
