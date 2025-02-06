@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Online/Cloffy.rd</title>
+    <link rel="stylesheet" href="CSS/Css.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+
+<img src="IMG/Logo san valentin.jpeg" style="width:125%; height: 120%; margin-left: -23%;">
+
+        </div>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Buscar...">
+            <button onclick="searchProducts()">Buscar</button>
+        </div>
+    </header>
+
+    <nav>
+        <div class="nav-container">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="Productos.html">Productos</a></li>
+                <li class="dropdown">
+                    <a href="#">Servicios</a>
+                    <ul class="dropdown-content">
+                        <li><a href="https://wa.me/18292685367?text=Me%20interesa%20comprar%20algo%20que%20vi%20en%20su%20catalogo">WhatsApp</a></li>
+                        <li><a href="https://www.instagram.com/cloffy.rd?igsh=NHowMG9nczYyeThj">Instagram</a></li>
+                    </ul>
+                </li>
+                <li><a href="https://wa.me/18292685367?text=Me%20interesa%20comprar%20algo%20que%20vi%20en%20su%20catalogo">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+     <!-- Carrito de compras -->
+     <div class="cart-display" id="cartDisplay">
+        <h2>Carrito de Compras</h2>
+        <ul id="cartItems">
+            <!-- Aquí se mostrarán los artículos agregados al carrito -->
+        </ul>
+        <p>Total: $<span id="totalAmount">0.00</span></p>
+        <button onclick="clearCart()">Vaciar Carrito</button>
+    </div>
+
+    <!-- Botón flotante del carrito -->
+    <button class="floating-cart" onclick="toggleCart()">🛒</button>
+    <main id="productContainer">
+        <div class="card" data-name="Pulseras para chicas Corazon" data-price="400">
+            <img src="IMG/Cadenas/1.jpg" alt="Pulceras para chicas">
+            <h3>Cadenas</h3>
+            <p>Precio und: RD$400.00</p>
+            <p>Cadenas con diferentes diseños.</p>
+            <button onclick="addToCart('Cadenas', 400)">Agregar al carrito</button>
+        </div>
+        <div class="card" data-name="Pulceras para chicas mariposas" data-price="550">
+            <img src="IMG/Pulseras/1.jpg" alt="Producto 2">
+            <h3>Pulsera para chicas mariposas</h3>
+            <p>Precio: RD$550.00</p>
+            <p>Pulsera con diseño de mariposas.</p>
+            <button onclick="addToCart('Pulsera para chicas mariposa', 550)">Agregar al carrito</button>
+        </div>
+
+        <div class="card" data-name="Pulceras para chica trevol" data-price="650">
+            <img src="IMG/Pulseras/2.jpg" alt="Producto 2">
+            <h3>Pulseras para chicas trevol</h3>
+            <p>Precio: RD$650.00</p>
+            <p>Pulsera con diseño de Trevol.</p>
+            <button onclick="addToCart('Pulsera para chicas trevol', 650)">Agregar al carrito</button>
+        </div>
+
+        <div class="card" data-name="Pulceras para chica trevol" data-price="650">
+            <img src="IMG/Pulseras/3.jpg" alt="Producto 2">
+            <h3>Pulsera para chicas trevol</h3>
+            <p>Precio: RD$650.00</p>
+            <p>Pulsera con diseño de Trevol.</p>
+            <button onclick="addToCart('Pulsera para chicas trevol negro', 650)">Agregar al carrito</button>
+        </div>
+    </main>
+
+    <script src="JS/JS.JS"></script>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>Cloffy Elegance & Style</h3>
+                <p class="slogan">"Viste tu esencia, adorna tu alma. Donde la moda se encuentra con la eternidad."</p>
+            </div>
+            <div class="footer-section links">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="Productos.html">Productos</a></li>
+                    <li><a href="https://www.instagram.com/cloffy.rd?igsh=NHowMG9nczYyeThj">Servicios</a></li>
+                    <li><a href="https://wa.me/18292685367?text=Me%20interesa%20comprar%20algo%20que%20vi%20en%20su%20catalogo">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-section social">
+                <h3>Síguenos</h3>
+                <ul>
+                    <li><a href="https://www.instagram.com/cloffy.rd?igsh=NHowMG9nczYyeThj" target="_blank">Instagram</a></li>
+                    <li><a href="https://wa.me/18292685367?text=Me%20interesa%20comprar%20algo%20que%20vi%20en%20su%20catalogo" target="_blank">WhatsApp</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Cloffy Elegance & Style. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
