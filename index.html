@@ -1,111 +1,161 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <title>Tienda Online/Cloffy.rd</title>
-
-    <link rel="stylesheet" href="CSS/Css.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cloffy.rd — Bisutería y accesorios | Santo Domingo, RD</title>
+  <meta name="description" content="Cloffy.rd: pulseras, cadenas, aretes, argollas y sets de bisutería en República Dominicana. Pide por WhatsApp y recibe en Santo Domingo.">
+  <link rel="stylesheet" href="CSS/theme.css">
 </head>
 <body>
-    <header>
-        <div class="logo">
 
-<img src="IMG/Logo.jpeg" style="width:125%; height: 120%; margin-left: -23%;">
+  <header class="site-header">
+    <a href="index.html" class="brand">Cloffy<span>.rd</span></a>
 
-        </div>
-        <div class="search-bar">
-            <input type="text" id="searchInput" placeholder="Buscar...">
-            <button onclick="searchProducts()">Buscar</button>
-        </div>
-    </header>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Buscar pulseras, cadenas, aretes…">
+      <button onclick="searchProducts()">Buscar</button>
+    </div>
+  </header>
 
-    <nav>
-        <div class="nav-container">
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="Productos.html">Productos</a></li>
-                <li class="dropdown">
-                    <a href="#">Servicios</a>
-                    <ul class="dropdown-content">
-                        <li><a href="https://wa.me/18292685367?text=Me%20interesa%20comprar%20algo%20que%20vi%20en%20su%20catalogo">WhatsApp</a></li>
-                        <li><a href="https://www.instagram.com/cloffy.rd?igsh=NHowMG9nczYyeThj">Instagram</a></li>
-                    </ul>
-                </li>
-                <li><a href="https://wa.me/18292685367?text=Me%20interesa%20comprar%20algo%20que%20vi%20en%20su%20catalogo">Contacto</a></li>
-            </ul>
-        </div>
-    </nav>
+  <nav class="site-nav">
+    <div class="nav-container">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="Productos.html">Productos</a></li>
+        <li class="dropdown">
+          <a href="#">Servicios</a>
+          <ul class="dropdown-content">
+            <li><a href="https://wa.me/18292685367?text=Me%20interesa%20comprar%20algo%20que%20vi%20en%20su%20catalogo">WhatsApp</a></li>
+            <li><a href="https://www.instagram.com/cloffy.rd?igsh=NHowMG9nczYyeThj">Instagram</a></li>
+          </ul>
+        </li>
+        <li><a href="https://wa.me/18292685367?text=Me%20interesa%20comprar%20algo%20que%20vi%20en%20su%20catalogo">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
 
-     <!-- Carrito de compras -->
-     <div class="cart-display" id="cartDisplay">
-        <h2>Carrito de Compras</h2>
-        <ul id="cartItems">
-            <!-- Aquí se mostrarán los artículos agregados al carrito -->
-        </ul>
-        <p>Total: $<span id="totalAmount">0.00</span></p>
-        <button onclick="clearCart()">Vaciar Carrito</button>
+  <!-- Carrito de compras -->
+  <div class="cart-display" id="cartDisplay">
+    <h2>Tu carrito</h2>
+    <ul id="cartItems"></ul>
+    <p>Total: RD$<span id="totalAmount">0.00</span></p>
+    <button onclick="clearCart()">Vaciar carrito</button>
+  </div>
+
+  <button class="floating-cart" onclick="toggleCart()" aria-label="Abrir carrito">🛒</button>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-copy">
+      <span class="eyebrow">Bisutería · Santo Domingo, RD</span>
+      <h1>Viste tu esencia,<br><em>adorna</em> tu alma.</h1>
+      <p>Piezas pensadas para el día a día y para las ocasiones que lo merecen: cadenas, pulseras, aretes y sets que acompañan tu estilo sin pesar en tu bolsillo.</p>
+      <div class="hero-actions">
+        <a href="Productos.html" class="btn btn-primary">Ver catálogo</a>
+        <a href="https://wa.me/18292685367?text=Me%20interesa%20comprar%20algo%20que%20vi%20en%20su%20catalogo" class="btn btn-ghost">Escribir por WhatsApp</a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <img src="IMG/Pulseras/1.jpg" alt="Pulsera destacada Cloffy.rd">
+      <span class="frame-note">Nueva colección</span>
+    </div>
+  </section>
+
+  <div class="chain-divider" role="presentation"></div>
+
+  <!-- CATEGORÍAS -->
+  <section class="section">
+    <div class="section-heading">
+      <div>
+        <span class="eyebrow">Explora</span>
+        <h2>Compra por categoría</h2>
+      </div>
+    </div>
+    <div class="cat-rail">
+      <a class="cat-card" href="Pulseras.html"><img src="IMG/Pulseras/2.jpg" alt="Pulseras"><span>Pulseras</span></a>
+      <a class="cat-card" href="Cadenas.html"><img src="IMG/Cadenas/1.jpg" alt="Cadenas"><span>Cadenas</span></a>
+      <a class="cat-card" href="Argollas.html"><img src="IMG/Argollas/1.png" alt="Argollas"><span>Argollas</span></a>
+      <a class="cat-card" href="Aretes.html"><img src="IMG/Aretes/1.jpg" alt="Aretes" onerror="this.closest('.cat-card').style.display='none'"><span>Aretes</span></a>
+      <a class="cat-card" href="Anillos.html"><img src="IMG/Anillos/1.jpg" alt="Anillos" onerror="this.closest('.cat-card').style.display='none'"><span>Anillos</span></a>
+      <a class="cat-card" href="Sets.html"><img src="IMG/Sets/1.jpg" alt="Sets" onerror="this.closest('.cat-card').style.display='none'"><span>Sets</span></a>
+    </div>
+  </section>
+
+  <div class="chain-divider" role="presentation"></div>
+
+  <!-- DESTACADOS -->
+  <section class="section" style="padding-bottom:0;">
+    <div class="section-heading">
+      <div>
+        <span class="eyebrow">Selección</span>
+        <h2>Lo más pedido</h2>
+      </div>
+      <a href="Productos.html" class="btn btn-ghost">Ver todo</a>
+    </div>
+  </section>
+
+  <main id="productContainer">
+    <div class="card" data-name="Pulsera para chicas mariposas" data-price="550">
+      <img src="IMG/Pulseras/1.jpg" alt="Pulsera para chicas mariposas">
+      <div class="card-body">
+        <h3>Pulsera mariposas</h3>
+        <p class="price">RD$550.00</p>
+        <p class="desc">Diseño delicado de mariposas, ideal para uso diario.</p>
+        <a href="Pulseras.html"><button>Ver más</button></a>
+      </div>
     </div>
 
-    <!-- Botón flotante del carrito -->
-    <button class="floating-cart" onclick="toggleCart()">🛒</button>
-    <main id="productContainer">
-        <div class="card" data-name="Pulceras para chicas" data-price="10">
-            <img src="IMG/Pulseras/1.jpg" alt="Pulceras para chicas">
-            <h3>Pulceras para chicas</h3>
-            <p>Pulceras en estilos de flores, gemas y lisas.</p>
-            <a href="Pulseras.html"><button>Ver más</button></a>
-        </div>
-        <div class="card" data-name="Pulceras para chicas" data-price="10">
-            <img src="IMG/Cadenas/1.jpg" alt="Producto 2">
-            <h3>Cadenas</h3>
-            <p>Cadenitas con diferentes formas</p>
-            <a href="Cadenas.html"><button>Ver más</button></a>
+    <div class="card" data-name="Cadenas" data-price="0">
+      <img src="IMG/Cadenas/1.jpg" alt="Cadenas">
+      <div class="card-body">
+        <h3>Cadenas</h3>
+        <p class="price">Varios diseños</p>
+        <p class="desc">Cadenitas en distintas formas y largos.</p>
+        <a href="Cadenas.html"><button>Ver más</button></a>
+      </div>
+    </div>
 
-        </div>
+    <div class="card" data-name="Argollas" data-price="0">
+      <img src="IMG/Argollas/1.png" alt="Argollas">
+      <div class="card-body">
+        <h3>Argollas</h3>
+        <p class="price">Varios diseños</p>
+        <p class="desc">Argollas y aretes para lucir elegante.</p>
+        <a href="Argollas.html"><button>Ver más</button></a>
+      </div>
+    </div>
+  </main>
 
-        <div class="card" data-name="Pulceras para chicas" data-price="10">
-            <img src="IMG/Argollas/1.png" alt="Producto 2">
-            <h3>Argollas</h3>
-            <p>Argollas-arretes para lucir elegates</p>
-            <a href="Argollas.html"><button>Ver más</button></a>
+  <script src="JS/JS.JS"></script>
 
-        </div>
-    </main> 
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section about">
+        <h3>Cloffy Elegance & Style</h3>
+        <p class="slogan">"Viste tu esencia, adorna tu alma. Donde la moda se encuentra con la eternidad."</p>
+      </div>
+      <div class="footer-section links">
+        <h3>Enlaces rápidos</h3>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="Productos.html">Productos</a></li>
+          <li><a href="https://www.instagram.com/cloffy.rd?igsh=NHowMG9nczYyeThj">Servicios</a></li>
+          <li><a href="https://wa.me/18292685367?text=Me%20interesa%20comprar%20algo%20que%20vi%20en%20su%20catalogo">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-section social">
+        <h3>Síguenos</h3>
+        <ul>
+          <li><a href="https://www.instagram.com/cloffy.rd?igsh=NHowMG9nczYyeThj" target="_blank">Instagram</a></li>
+          <li><a href="https://wa.me/18292685367?text=Me%20interesa%20comprar%20algo%20que%20vi%20en%20su%20catalogo" target="_blank">WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Cloffy Elegance & Style. Todos los derechos reservados.</p>
+    </div>
+  </footer>
 
-    <a href="Productos.html"><button style="margin-left: 82%; margin-bottom: 10%;" class="w3-button w3-xlarge w3-circle w3-black">+</button></a>
-
-
-    <script src="JS/JS.JS"></script>
-
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section about">
-                <h3>Cloffy Elegance & Style</h3>
-                <p class="slogan">"Viste tu esencia, adorna tu alma. Donde la moda se encuentra con la eternidad."</p>
-            </div>
-            <div class="footer-section links">
-                <h3>Enlaces Rápidos</h3>
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="Productos.html">Productos</a></li>
-                    <li><a href="https://www.instagram.com/cloffy.rd?igsh=NHowMG9nczYyeThj">Servicios</a></li>
-                    <li><a href="https://wa.me/18292685367?text=Me%20interesa%20comprar%20algo%20que%20vi%20en%20su%20catalogo">Contacto</a></li>
-                </ul>
-            </div>
-            <div class="footer-section social">
-                <h3>Síguenos</h3>
-                <ul>
-                    <li><a href="https://www.instagram.com/cloffy.rd?igsh=NHowMG9nczYyeThj" target="_blank">Instagram</a></li>
-                    <li><a href="https://wa.me/18292685367?text=Me%20interesa%20comprar%20algo%20que%20vi%20en%20su%20catalogo" target="_blank">WhatsApp</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Cloffy Elegance & Style. Todos los derechos reservados.</p>
-        </div>
-    </footer>
 </body>
 </html>
