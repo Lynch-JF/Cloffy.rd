@@ -1,198 +1,296 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+/* ==========================================================================
+   VARIABLES GLOBALES
+   ========================================================================== */
+:root {
+  --color-primary: #007BFF;
+  --color-primary-dark: #0056b3;
+  --color-text: #333;
+  --color-text-light: #666;
+  --color-bg: #f4f4f4;
+  --color-white: #fff;
+  --color-dark: #333;
+  --color-dark-2: #222;
+  --color-accent: #ffcc00;
+  --radius-sm: 5px;
+  --radius-md: 10px;
+  --shadow-sm: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 8px 16px rgba(0, 0, 0, 0.2);
+  --transition: 0.3s ease;
+  --max-width: 1200px;
 }
 
+/* ==========================================================================
+   RESET
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+/* ==========================================================================
+   HEADER
+   ========================================================================== */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: white;
-    color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: var(--color-white);
+  color: var(--color-text);
 }
 
 .logo {
-    font-size: 24px;
-    font-weight: bold;
+  font-size: 24px;
+  font-weight: bold;
 }
 
 .search-bar {
-    display: flex;
+  display: flex;
+  gap: 5px;
 }
 
 .search-bar input {
-    padding: 5px;
-    margin-right: 5px;
+  padding: 5px;
 }
 
+/* ==========================================================================
+   NAV / DROPDOWN
+   Nota: el dropdown por :hover no funciona bien en móvil/teclado.
+   Se deja el hover como mejora progresiva y se agrega soporte por foco
+   y por clase ".open" (para alternar con JS en pantallas táctiles).
+   ========================================================================== */
 nav {
-    background-color: white;
-    padding: 10px 20px;
+  background-color: var(--color-white);
+  padding: 10px 20px;
 }
 
 .nav-container {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
+.nav-container ul {
+  list-style: none;
+  display: flex;
 }
 
-nav ul li {
-    margin: 0 10px;
-    position: relative;
+.nav-container ul li {
+  margin: 0 10px;
+  position: relative;
 }
 
-nav ul li a {
-    color: black;
-    text-decoration: none;
+.nav-container ul li a {
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: var(--color-text);
 }
 
 .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: white;
-    padding: 10px;
-    top: 100%;
-    left: 0;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--color-white);
+  padding: 10px;
+  box-shadow: var(--shadow-sm);
+  border-radius: var(--radius-sm);
+  min-width: 160px;
+  z-index: 10;
 }
 
-.dropdown:hover .dropdown-content {
-    display: block;
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content,
+.dropdown.open .dropdown-content {
+  display: block;
 }
 
-
+/* ==========================================================================
+   CART (flotante y panel)
+   ========================================================================== */
 .cart-display {
-    display: none;
-    position: fixed;
-    right: 20px;
-    top: 60px;
-    background-color: white;
-    padding: 20px;
-    border: 1px solid #ccc;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
+  display: none;
+  position: fixed;
+  right: 20px;
+  top: 60px;
+  background-color: var(--color-white);
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: var(--shadow-sm);
+  border-radius: var(--radius-sm);
+  z-index: 1000;
 }
 
 .floating-cart {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    font-size: 24px;
-    cursor: pointer;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
 }
 
-main {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 20px;
+/* ==========================================================================
+   GRID DE PRODUCTOS / CARDS
+   Se usa grid en vez de flex-wrap: reparte mejor el espacio y evita
+   huecos irregulares cuando la última fila no se llena.
+   ========================================================================== */
+main,
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: var(--max-width);
+  margin: 20px auto;
+  padding: 20px;
 }
 
 .card {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 10px;
-    width: 200px;
-    text-align: center;
+  background-color: var(--color-white);
+  border: 1px solid #ccc;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  text-align: center;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: var(--shadow-md);
 }
 
 .card img {
-    max-width: 100%;
-    height: auto;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
 }
 
-.card button {
-    margin: 5px;
-    padding: 5px 10px;
-    cursor: pointer;
+.card-content {
+  padding: 20px;
 }
 
+.card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+}
+
+.card p {
+  margin-bottom: 16px;
+  color: var(--color-text-light);
+}
+
+.card button,
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color var(--transition), transform var(--transition);
+}
+
+.card button:hover,
+.btn:hover {
+  background-color: var(--color-primary-dark);
+  transform: translateY(-3px);
+}
+
+/* ==========================================================================
+   FOOTER
+   (antes había dos definiciones distintas de footer; se unificaron)
+   ========================================================================== */
 footer {
-    background-color: #333;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  padding: 20px 0 0;
+  text-align: center;
 }
 
 .footer-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 20px;
 }
 
 .footer-section {
-    flex: 1;
-    margin: 10px;
-    min-width: 200px;
+  flex: 1;
+  min-width: 200px;
+  margin: 10px;
 }
 
 .footer-section h3 {
-    margin-bottom: 15px;
-    font-size: 18px;
+  margin-bottom: 15px;
+  font-size: 18px;
 }
 
 .footer-section p.slogan {
-    font-style: italic;
-    color: #ccc;
+  font-style: italic;
+  color: #ccc;
 }
 
 .footer-section ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
 }
 
 .footer-section ul li {
-    margin: 10px 0;
+  margin: 10px 0;
 }
 
 .footer-section ul li a {
-    color: white;
-    text-decoration: none;
-    transition: color 0.3s ease;
+  color: var(--color-white);
+  text-decoration: none;
+  transition: color var(--transition);
 }
 
 .footer-section ul li a:hover {
-    color: #ffcc00;
+  color: var(--color-accent);
 }
 
 .footer-bottom {
-    background-color: #222;
-    padding: 10px 0;
-    margin-top: 20px;
+  background-color: var(--color-dark-2);
+  padding: 10px 0;
 }
 
 .footer-bottom p {
-    margin: 0;
-    font-size: 14px;
+  font-size: 14px;
 }
 
-/* Responsive Design */
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
 @media (max-width: 768px) {
-    .footer-content {
-        flex-direction: column;
-        align-items: center;
-    }
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 
-    .footer-section {
-        text-align: center;
-        margin: 20px 0;
-    }
+  .footer-section {
+    margin: 20px 0;
+  }
+
+  header {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
 }
