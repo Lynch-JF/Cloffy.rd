@@ -1,0 +1,674 @@
+[
+  {
+    "id": 1,
+    "categoria": "Pulseras",
+    "nombre": "Pulsera corazón",
+    "imagen": "IMG/Pulsera.jpg",
+    "precio": 550,
+    "descripcion": "Diseño de corazón."
+  },
+  {
+    "id": 2,
+    "categoria": "Pulseras",
+    "nombre": "Pulsera mariposas",
+    "imagen": "IMG/Pulseras/1.jpg",
+    "precio": 550,
+    "descripcion": "Diseño de mariposas."
+  },
+  {
+    "id": 3,
+    "categoria": "Pulseras",
+    "nombre": "Pulsera trébol",
+    "imagen": "IMG/Pulseras/2.jpg",
+    "precio": 650,
+    "descripcion": "Diseño de trébol."
+  },
+  {
+    "id": 4,
+    "categoria": "Pulseras",
+    "nombre": "Pulsera trébol negro",
+    "imagen": "IMG/Pulseras/3.jpg",
+    "precio": 650,
+    "descripcion": "Diseño de trébol."
+  },
+  {
+    "id": 5,
+    "categoria": "Pulseras",
+    "nombre": "Pulsera para chicas",
+    "imagen": "IMG/Pulseras/4.jpg",
+    "precio": 650,
+    "descripcion": "Diseño de trébol."
+  },
+  {
+    "id": 6,
+    "categoria": "Pulseras",
+    "nombre": "Pulsera para chicas",
+    "imagen": "IMG/Pulseras/5.jpg",
+    "precio": 650,
+    "descripcion": "Diseño de trébol."
+  },
+  {
+    "id": 7,
+    "categoria": "Pulseras",
+    "nombre": "Pulsera para chicas",
+    "imagen": "IMG/Pulseras/8.png",
+    "precio": 650,
+    "descripcion": "Diseño de trébol."
+  },
+  {
+    "id": 8,
+    "categoria": "Pulseras",
+    "nombre": "Pulsera para chicas",
+    "imagen": "IMG/Pulseras/9.png",
+    "precio": 650,
+    "descripcion": "Diseño de trébol."
+  },
+  {
+    "id": 9,
+    "categoria": "Pulseras",
+    "nombre": "Pulsera para chicas",
+    "imagen": "IMG/Pulseras/10.png",
+    "precio": 650,
+    "descripcion": "Diseño de trébol."
+  },
+  {
+    "id": 10,
+    "categoria": "Pulseras",
+    "nombre": "Pulsera para chicas",
+    "imagen": "IMG/Pulseras/11.png",
+    "precio": 650,
+    "descripcion": "Diseño de trébol."
+  },
+  {
+    "id": 11,
+    "categoria": "Pulseras",
+    "nombre": "Pulsera para chicas",
+    "imagen": "IMG/Pulseras/12.png",
+    "precio": 650,
+    "descripcion": "Diseño de trébol."
+  },
+  {
+    "id": 12,
+    "categoria": "Pulseras",
+    "nombre": "Pulsera para chicas",
+    "imagen": "IMG/Pulseras/13.png",
+    "precio": 650,
+    "descripcion": "Diseño de trébol."
+  },
+  {
+    "id": 13,
+    "categoria": "Pulseras",
+    "nombre": "Pulsera para chicas",
+    "imagen": "IMG/Pulseras/14.png",
+    "precio": 650,
+    "descripcion": "Diseño de trébol."
+  },
+  {
+    "id": 14,
+    "categoria": "Pulseras",
+    "nombre": "Pulsera para chicas",
+    "imagen": "IMG/Pulseras/15.png",
+    "precio": 650,
+    "descripcion": "Diseño de trébol."
+  },
+  {
+    "id": 15,
+    "categoria": "Pulseras",
+    "nombre": "Pulsera para chicas",
+    "imagen": "IMG/Pulseras/16.png",
+    "precio": 650,
+    "descripcion": "Diseño de trébol."
+  },
+  {
+    "id": 16,
+    "categoria": "Anillos",
+    "nombre": "Anillo diseño 1",
+    "imagen": "IMG/Anillos/1.jpg",
+    "precio": null,
+    "descripcion": "Anillo de bisutería Cloffy.rd."
+  },
+  {
+    "id": 17,
+    "categoria": "Anillos",
+    "nombre": "Anillo diseño 2",
+    "imagen": "IMG/Anillos/2.jpg",
+    "precio": null,
+    "descripcion": "Anillo de bisutería Cloffy.rd."
+  },
+  {
+    "id": 18,
+    "categoria": "Anillos",
+    "nombre": "Anillo diseño 3",
+    "imagen": "IMG/Anillos/3.jpg",
+    "precio": null,
+    "descripcion": "Anillo de bisutería Cloffy.rd."
+  },
+  {
+    "id": 19,
+    "categoria": "Anillos",
+    "nombre": "Anillo diseño 4",
+    "imagen": "IMG/Anillos/4.jpg",
+    "precio": null,
+    "descripcion": "Anillo de bisutería Cloffy.rd."
+  },
+  {
+    "id": 20,
+    "categoria": "Aretes",
+    "nombre": "Aretes con forma de frutos",
+    "imagen": "IMG/Aretes/2.jpg",
+    "precio": 400,
+    "descripcion": "Diseño con forma de frutos."
+  },
+  {
+    "id": 21,
+    "categoria": "Aretes",
+    "nombre": "Aretes mariposa",
+    "imagen": "IMG/Aretes/3.jpg",
+    "precio": 550,
+    "descripcion": "Diseño de mariposas."
+  },
+  {
+    "id": 22,
+    "categoria": "Aretes",
+    "nombre": "Aretes con forma de trébol",
+    "imagen": "IMG/Aretes/4.jpg",
+    "precio": 550,
+    "descripcion": "Diseño de trébol."
+  },
+  {
+    "id": 23,
+    "categoria": "Aretes",
+    "nombre": "Aretes con forma de trébol",
+    "imagen": "IMG/Aretes/5.jpg",
+    "precio": 550,
+    "descripcion": "Diseño de trébol."
+  },
+  {
+    "id": 24,
+    "categoria": "Aretes",
+    "nombre": "Aretes con forma de trébol",
+    "imagen": "IMG/Aretes/6.jpg",
+    "precio": 550,
+    "descripcion": "Diseño de trébol."
+  },
+  {
+    "id": 25,
+    "categoria": "Aretes",
+    "nombre": "Aretes con forma de trébol",
+    "imagen": "IMG/Aretes/7.jpg",
+    "precio": 550,
+    "descripcion": "Diseño de trébol."
+  },
+  {
+    "id": 26,
+    "categoria": "Aretes",
+    "nombre": "Aretes con forma de trébol",
+    "imagen": "IMG/Aretes/8.jpg",
+    "precio": 550,
+    "descripcion": "Diseño de trébol."
+  },
+  {
+    "id": 27,
+    "categoria": "Argollas",
+    "nombre": "Argollas",
+    "imagen": "IMG/Argollas/2.png",
+    "precio": 550,
+    "descripcion": "Diseño clásico."
+  },
+  {
+    "id": 28,
+    "categoria": "Argollas",
+    "nombre": "Argollas mariposa",
+    "imagen": "IMG/Argollas/3.png",
+    "precio": 550,
+    "descripcion": "Diseño de mariposas."
+  },
+  {
+    "id": 29,
+    "categoria": "Argollas",
+    "nombre": "Argollas flor blanco y negro",
+    "imagen": "IMG/Argollas/4.png",
+    "precio": 650,
+    "descripcion": "Diseño de flores blanco y negro."
+  },
+  {
+    "id": 30,
+    "categoria": "Argollas",
+    "nombre": "Argollas flor de colores",
+    "imagen": "IMG/Argollas/5.png",
+    "precio": 650,
+    "descripcion": "Diseño de flores de colores."
+  },
+  {
+    "id": 31,
+    "categoria": "Argollas",
+    "nombre": "Argollas árbol dorado",
+    "imagen": "IMG/Argollas/6.png",
+    "precio": 650,
+    "descripcion": "Diseño de árbol dorado."
+  },
+  {
+    "id": 32,
+    "categoria": "Argollas",
+    "nombre": "Argollas con llave",
+    "imagen": "IMG/Argollas/7.png",
+    "precio": 650,
+    "descripcion": "Diseño de llave."
+  },
+  {
+    "id": 33,
+    "categoria": "Argollas",
+    "nombre": "Argollas con llave",
+    "imagen": "IMG/Argollas/8.png",
+    "precio": 650,
+    "descripcion": "Diseño de llave."
+  },
+  {
+    "id": 34,
+    "categoria": "Argollas",
+    "nombre": "Argollas con llave",
+    "imagen": "IMG/Argollas/9.png",
+    "precio": 650,
+    "descripcion": "Diseño de llave."
+  },
+  {
+    "id": 35,
+    "categoria": "Bodys",
+    "nombre": "Body manga larga",
+    "imagen": "IMG/Bodys/1.jpg",
+    "precio": 450,
+    "descripcion": "Body manga larga."
+  },
+  {
+    "id": 36,
+    "categoria": "Bodys",
+    "nombre": "Body manga larga",
+    "imagen": "IMG/Bodys/2.jpg",
+    "precio": 450,
+    "descripcion": "Body manga larga."
+  },
+  {
+    "id": 37,
+    "categoria": "Bodys",
+    "nombre": "Body manga larga",
+    "imagen": "IMG/Bodys/3.jpg",
+    "precio": 450,
+    "descripcion": "Body manga larga."
+  },
+  {
+    "id": 38,
+    "categoria": "Bodys",
+    "nombre": "Body manga corta",
+    "imagen": "IMG/Bodys/4.jpg",
+    "precio": 400,
+    "descripcion": "Body manga corta."
+  },
+  {
+    "id": 39,
+    "categoria": "Bodys",
+    "nombre": "Body manga corta",
+    "imagen": "IMG/Bodys/5.jpg",
+    "precio": 400,
+    "descripcion": "Body manga corta."
+  },
+  {
+    "id": 40,
+    "categoria": "Bodys",
+    "nombre": "Body manga corta",
+    "imagen": "IMG/Bodys/6.jpg",
+    "precio": 400,
+    "descripcion": "Body manga corta."
+  },
+  {
+    "id": 41,
+    "categoria": "Bodys",
+    "nombre": "Body manga corta",
+    "imagen": "IMG/Bodys/7.jpg",
+    "precio": 400,
+    "descripcion": "Body manga corta."
+  },
+  {
+    "id": 42,
+    "categoria": "Cadenas",
+    "nombre": "Cadenas",
+    "imagen": "IMG/Cadenas/1.jpg",
+    "precio": 400,
+    "descripcion": "Cadenas con diferentes diseños."
+  },
+  {
+    "id": 43,
+    "categoria": "Cadenas",
+    "nombre": "Cadenas forma de corazón",
+    "imagen": "IMG/Cadenas/4.png",
+    "precio": 400,
+    "descripcion": "Diseño en forma de corazón."
+  },
+  {
+    "id": 44,
+    "categoria": "Cadenas",
+    "nombre": "Cadenas plateadas",
+    "imagen": "IMG/Cadenas/2.jpg",
+    "precio": 400,
+    "descripcion": "Diseño trébol plateado."
+  },
+  {
+    "id": 45,
+    "categoria": "Cadenas",
+    "nombre": "Cadenas",
+    "imagen": "IMG/Cadenas/3.jpg",
+    "precio": 400,
+    "descripcion": "Diseño trébol."
+  },
+  {
+    "id": 46,
+    "categoria": "Cadenas",
+    "nombre": "Cadenas",
+    "imagen": "IMG/Cadenas/5.png",
+    "precio": 400,
+    "descripcion": "Diseño trébol."
+  },
+  {
+    "id": 47,
+    "categoria": "Cadenas",
+    "nombre": "Cadenas",
+    "imagen": "IMG/Cadenas/6.png",
+    "precio": 300,
+    "descripcion": "Diseño trébol."
+  },
+  {
+    "id": 48,
+    "categoria": "Cadenas",
+    "nombre": "Cadenas",
+    "imagen": "IMG/Cadenas/7.png",
+    "precio": 300,
+    "descripcion": "Diseño trébol."
+  },
+  {
+    "id": 49,
+    "categoria": "Cadenas",
+    "nombre": "Cadenas",
+    "imagen": "IMG/Cadenas/8.png",
+    "precio": 300,
+    "descripcion": "Diseño trébol."
+  },
+  {
+    "id": 50,
+    "categoria": "Cadenas",
+    "nombre": "Cadenas",
+    "imagen": "IMG/Cadenas/10.png",
+    "precio": 300,
+    "descripcion": "Diseño trébol."
+  },
+  {
+    "id": 51,
+    "categoria": "Cadenas",
+    "nombre": "Cadenas",
+    "imagen": "IMG/Cadenas/11.png",
+    "precio": 300,
+    "descripcion": "Diseño trébol."
+  },
+  {
+    "id": 52,
+    "categoria": "Cadenas",
+    "nombre": "Cadenas doradas",
+    "imagen": "IMG/Cadenas/12.png",
+    "precio": 300,
+    "descripcion": "Diseño trébol."
+  },
+  {
+    "id": 53,
+    "categoria": "Cadenas",
+    "nombre": "Cadenas letra J",
+    "imagen": "IMG/Cadenas/13.png",
+    "precio": 300,
+    "descripcion": "Cadena con letra J."
+  },
+  {
+    "id": 54,
+    "categoria": "Cadenas",
+    "nombre": "Cadenas letra E",
+    "imagen": "IMG/Cadenas/14.png",
+    "precio": 300,
+    "descripcion": "Cadena con letra E."
+  },
+  {
+    "id": 55,
+    "categoria": "Cadenas",
+    "nombre": "Cadenas letra B",
+    "imagen": "IMG/Cadenas/15.png",
+    "precio": 300,
+    "descripcion": "Cadena con letra B."
+  },
+  {
+    "id": 56,
+    "categoria": "Cadenas",
+    "nombre": "Cadenas letra B",
+    "imagen": "IMG/Cadenas/16.jpg",
+    "precio": 300,
+    "descripcion": "Cadena con letra B."
+  },
+  {
+    "id": 57,
+    "categoria": "Cadenas",
+    "nombre": "Cadenas letra B",
+    "imagen": "IMG/Cadenas/17.png",
+    "precio": 300,
+    "descripcion": "Cadena con letra B."
+  },
+  {
+    "id": 58,
+    "categoria": "Cadenas",
+    "nombre": "Cadenas letra B",
+    "imagen": "IMG/Cadenas/18.png",
+    "precio": 300,
+    "descripcion": "Cadena con letra B."
+  },
+  {
+    "id": 59,
+    "categoria": "Cadenas",
+    "nombre": "Cadenas letra B",
+    "imagen": "IMG/Cadenas/19.png",
+    "precio": 300,
+    "descripcion": "Cadena con letra B."
+  },
+  {
+    "id": 60,
+    "categoria": "Cadenas",
+    "nombre": "Cadenas letra B",
+    "imagen": "IMG/Cadenas/20.png",
+    "precio": 300,
+    "descripcion": "Cadena con letra B."
+  },
+  {
+    "id": 61,
+    "categoria": "Cadenas",
+    "nombre": "Cadenas letra B",
+    "imagen": "IMG/Cadenas/21.png",
+    "precio": 300,
+    "descripcion": "Cadena con letra B."
+  },
+  {
+    "id": 62,
+    "categoria": "Cadenas",
+    "nombre": "Cadenas letra B",
+    "imagen": "IMG/Cadenas/22.png",
+    "precio": 300,
+    "descripcion": "Cadena con letra B."
+  },
+  {
+    "id": 63,
+    "categoria": "Cadenas",
+    "nombre": "Cadenas letra B",
+    "imagen": "IMG/Cadenas/23.png",
+    "precio": 300,
+    "descripcion": "Cadena con letra B."
+  },
+  {
+    "id": 64,
+    "categoria": "Cadenas",
+    "nombre": "Cadenas letra B",
+    "imagen": "IMG/Cadenas/24.png",
+    "precio": 300,
+    "descripcion": "Cadena con letra B."
+  },
+  {
+    "id": 65,
+    "categoria": "Combos",
+    "nombre": "Combo San Valentín",
+    "imagen": "IMG/Combos/1.jpeg",
+    "precio": null,
+    "descripcion": "Combo de temporada San Valentín."
+  },
+  {
+    "id": 66,
+    "categoria": "Combos",
+    "nombre": "Combo San Valentín (alt)",
+    "imagen": "IMG/Combos/1.png",
+    "precio": null,
+    "descripcion": "Combo de temporada San Valentín."
+  },
+  {
+    "id": 67,
+    "categoria": "Guillos",
+    "nombre": "Guillo sin formas",
+    "imagen": "IMG/Guillos/1.png",
+    "precio": 300,
+    "descripcion": "Sin formas."
+  },
+  {
+    "id": 68,
+    "categoria": "Guillos",
+    "nombre": "Guillo forma de corazón",
+    "imagen": "IMG/Guillos/2.png",
+    "precio": 300,
+    "descripcion": "Forma de corazón."
+  },
+  {
+    "id": 69,
+    "categoria": "Guillos",
+    "nombre": "Guillo forma de flores",
+    "imagen": "IMG/Guillos/3.png",
+    "precio": 300,
+    "descripcion": "Forma de flores blanco y negro."
+  },
+  {
+    "id": 70,
+    "categoria": "Guillos",
+    "nombre": "Guillo forma de flores",
+    "imagen": "IMG/Guillos/4.png",
+    "precio": 300,
+    "descripcion": "Forma de flores de colores."
+  },
+  {
+    "id": 71,
+    "categoria": "Guillos",
+    "nombre": "Guillo forma de árbol",
+    "imagen": "IMG/Guillos/5.png",
+    "precio": 300,
+    "descripcion": "Forma de árbol dorado."
+  },
+  {
+    "id": 72,
+    "categoria": "Guillos",
+    "nombre": "Guillo forma de llave",
+    "imagen": "IMG/Guillos/6.png",
+    "precio": 300,
+    "descripcion": "Forma de llave."
+  },
+  {
+    "id": 73,
+    "categoria": "Sets",
+    "nombre": "Set",
+    "imagen": "IMG/Sets/1.jpg",
+    "precio": 550,
+    "descripcion": "Set de bisutería."
+  },
+  {
+    "id": 74,
+    "categoria": "Sets",
+    "nombre": "Set",
+    "imagen": "IMG/Sets/2.jpg",
+    "precio": 550,
+    "descripcion": "Set de bisutería."
+  },
+  {
+    "id": 75,
+    "categoria": "Sets",
+    "nombre": "Set",
+    "imagen": "IMG/Sets/3.jpg",
+    "precio": 550,
+    "descripcion": "Set de bisutería."
+  },
+  {
+    "id": 76,
+    "categoria": "Sets",
+    "nombre": "Set",
+    "imagen": "IMG/Sets/4.jpg",
+    "precio": 550,
+    "descripcion": "Set de bisutería."
+  },
+  {
+    "id": 77,
+    "categoria": "Sets",
+    "nombre": "Set aretes y cadena",
+    "imagen": "IMG/Sets/5.png",
+    "precio": 450,
+    "descripcion": "Aretes y cadena a juego."
+  },
+  {
+    "id": 78,
+    "categoria": "Sets",
+    "nombre": "Set aretes y cadena",
+    "imagen": "IMG/Sets/6.png",
+    "precio": 650,
+    "descripcion": "Aretes y cadena a juego."
+  },
+  {
+    "id": 79,
+    "categoria": "Sets",
+    "nombre": "Set aretes y cadena",
+    "imagen": "IMG/Sets/7.png",
+    "precio": 650,
+    "descripcion": "Aretes y cadena a juego."
+  },
+  {
+    "id": 80,
+    "categoria": "Sets",
+    "nombre": "Set aretes y cadena de perlas",
+    "imagen": "IMG/Sets/8.png",
+    "precio": 650,
+    "descripcion": "Aretes y cadena de perlas."
+  },
+  {
+    "id": 81,
+    "categoria": "Sets",
+    "nombre": "Set 2 collares y aretes de perla",
+    "imagen": "IMG/Sets/9.png",
+    "precio": 650,
+    "descripcion": "2 collares y un par de aretes de perla."
+  },
+  {
+    "id": 82,
+    "categoria": "Tops",
+    "nombre": "Top diseño 1",
+    "imagen": "IMG/Tops/1.jpg",
+    "precio": 300,
+    "descripcion": "Top Cloffy.rd."
+  },
+  {
+    "id": 83,
+    "categoria": "Tops",
+    "nombre": "Top diseño 2",
+    "imagen": "IMG/Tops/2.jpg",
+    "precio": 300,
+    "descripcion": "Top Cloffy.rd."
+  },
+  {
+    "id": 84,
+    "categoria": "Tops",
+    "nombre": "Top diseño 3",
+    "imagen": "IMG/Tops/3.jpg",
+    "precio": 300,
+    "descripcion": "Top Cloffy.rd."
+  }
+]

@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Productos | Cloffy.rd</title>
-  <meta name="description" content="Catálogo completo de bisutería Cloffy.rd: pulseras, cadenas, aretes, argollas, anillos, sets, tops, bodys, guillos y combos.">
+  <title id="pageTitle">Categoría | Cloffy.rd</title>
+  <meta name="description" content="Bisutería Cloffy.rd, República Dominicana. Pide por WhatsApp.">
   <link rel="stylesheet" href="CSS/Css.css">
 </head>
 <body>
@@ -12,7 +12,7 @@
   <header class="site-header">
     <a href="index.html" class="brand">Cloffy<span>.rd</span></a>
     <div class="search-bar">
-      <input type="text" id="searchInput" placeholder="Buscar productos…">
+      <input type="text" id="searchInput" placeholder="Buscar…">
       <button onclick="searchProducts()">Buscar</button>
     </div>
   </header>
@@ -44,24 +44,16 @@
   <button class="floating-cart" onclick="toggleCart()" aria-label="Abrir carrito">🛒</button>
 
   <section class="section" style="padding-bottom:0;">
-    <span class="eyebrow">Catálogo</span>
-    <h2>Todos los productos</h2>
+    <span class="eyebrow">Categoría</span>
+    <h2 id="catHeading">Cargando…</h2>
   </section>
 
-  <div class="cat-rail catalog-rail">
-    <a class="cat-card" href="categoria.html?cat=Pulseras"><img src="IMG/Pulseras/1.jpg" alt="Pulseras"><span>Pulseras</span></a>
-    <a class="cat-card" href="categoria.html?cat=Cadenas"><img src="IMG/Cadenas/1.jpg" alt="Cadenas"><span>Cadenas</span></a>
-    <a class="cat-card" href="categoria.html?cat=Argollas"><img src="IMG/Argollas/2.png" alt="Argollas"><span>Argollas</span></a>
-    <a class="cat-card" href="categoria.html?cat=Aretes"><img src="IMG/Aretes/2.jpg" alt="Aretes"><span>Aretes</span></a>
-    <a class="cat-card" href="categoria.html?cat=Guillos"><img src="IMG/Guillos/1.png" alt="Guillos"><span>Guillos</span></a>
-    <a class="cat-card" href="categoria.html?cat=Anillos"><img src="IMG/Anillos/1.jpg" alt="Anillos"><span>Anillos</span></a>
-    <a class="cat-card" href="categoria.html?cat=Bodys"><img src="IMG/Bodys/1.jpg" alt="Bodys"><span>Bodys</span></a>
-    <a class="cat-card" href="categoria.html?cat=Tops"><img src="IMG/Tops/1.jpg" alt="Tops"><span>Tops</span></a>
-    <a class="cat-card" href="categoria.html?cat=Sets"><img src="IMG/Sets/1.jpg" alt="Sets"><span>Sets</span></a>
-    <a class="cat-card" href="categoria.html?cat=Combos"><img src="IMG/Combos/1.jpeg" alt="Combos de temporada"><span>Combos</span></a>
-  </div>
+  <main id="productContainer">
+    <p style="padding:0 32px; color:var(--ink-soft);">Cargando productos…</p>
+  </main>
 
   <script src="JS/JS.JS"></script>
+  <script src="JS/catalogo.js"></script>
 
   <footer>
     <div class="footer-content">
