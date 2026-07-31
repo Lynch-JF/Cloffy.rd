@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anillos | Cloffy.rd</title>
+  <meta name="description" content="Anillos de bisutería en Cloffy.rd, República Dominicana. Pide por WhatsApp.">
+  <link rel="stylesheet" href="CSS/Css.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <a href="index.html" class="brand">Cloffy<span>.rd</span></a>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Buscar anillos…">
+      <button onclick="searchProducts()">Buscar</button>
+    </div>
+  </header>
+
+  <nav class="site-nav">
+    <div class="nav-container">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="Productos.html">Productos</a></li>
+        <li class="dropdown">
+          <a href="#">Servicios</a>
+          <ul class="dropdown-content">
+            <li><a href="https://wa.me/18292685367?text=Me%20interesa%20comprar%20algo%20que%20vi%20en%20su%20catalogo">WhatsApp</a></li>
+            <li><a href="https://www.instagram.com/cloffy.rd?igsh=NHowMG9nczYyeThj">Instagram</a></li>
+          </ul>
+        </li>
+        <li><a href="https://wa.me/18292685367?text=Me%20interesa%20comprar%20algo%20que%20vi%20en%20su%20catalogo">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="cart-display" id="cartDisplay">
+    <h2>Tu carrito</h2>
+    <ul id="cartItems"></ul>
+    <p>Total: RD$<span id="totalAmount">0.00</span></p>
+    <button onclick="clearCart()">Vaciar carrito</button>
+  </div>
+
+  <button class="floating-cart" onclick="toggleCart()" aria-label="Abrir carrito">🛒</button>
+
+  <section class="section" style="padding-bottom:0;">
+    <span class="eyebrow">Categoría</span>
+    <h2>Anillos</h2>
+  </section>
+
+  <main id="productContainer">
+    <div class="card" data-name="Anillo diseño 1">
+      <img src="IMG/Anillos/1.jpg" alt="Anillo diseño 1">
+      <div class="card-body">
+        <h3>Anillo diseño 1</h3>
+        <p class="price">Precio a consultar</p>
+        <p class="desc">Anillo de bisutería Cloffy.rd.</p>
+        <a class="btn-add" href="https://wa.me/18292685367?text=Me%20interesa%20el/la%20Anillo%20dise%C3%B1o%201%20que%20vi%20en%20su%20catalogo" target="_blank">Consultar por WhatsApp</a>
+      </div>
+    </div>
+    <div class="card" data-name="Anillo diseño 2">
+      <img src="IMG/Anillos/2.jpg" alt="Anillo diseño 2">
+      <div class="card-body">
+        <h3>Anillo diseño 2</h3>
+        <p class="price">Precio a consultar</p>
+        <p class="desc">Anillo de bisutería Cloffy.rd.</p>
+        <a class="btn-add" href="https://wa.me/18292685367?text=Me%20interesa%20el/la%20Anillo%20dise%C3%B1o%202%20que%20vi%20en%20su%20catalogo" target="_blank">Consultar por WhatsApp</a>
+      </div>
+    </div>
+    <div class="card" data-name="Anillo diseño 3">
+      <img src="IMG/Anillos/3.jpg" alt="Anillo diseño 3">
+      <div class="card-body">
+        <h3>Anillo diseño 3</h3>
+        <p class="price">Precio a consultar</p>
+        <p class="desc">Anillo de bisutería Cloffy.rd.</p>
+        <a class="btn-add" href="https://wa.me/18292685367?text=Me%20interesa%20el/la%20Anillo%20dise%C3%B1o%203%20que%20vi%20en%20su%20catalogo" target="_blank">Consultar por WhatsApp</a>
+      </div>
+    </div>
+    <div class="card" data-name="Anillo diseño 4">
+      <img src="IMG/Anillos/4.jpg" alt="Anillo diseño 4">
+      <div class="card-body">
+        <h3>Anillo diseño 4</h3>
+        <p class="price">Precio a consultar</p>
+        <p class="desc">Anillo de bisutería Cloffy.rd.</p>
+        <a class="btn-add" href="https://wa.me/18292685367?text=Me%20interesa%20el/la%20Anillo%20dise%C3%B1o%204%20que%20vi%20en%20su%20catalogo" target="_blank">Consultar por WhatsApp</a>
+      </div>
+    </div>
+  </main>
+
+  <script src="JS/JS.JS"></script>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section about">
+        <h3>Cloffy Elegance & Style</h3>
+        <p class="slogan">"Viste tu esencia, adorna tu alma. Donde la moda se encuentra con la eternidad."</p>
+      </div>
+      <div class="footer-section links">
+        <h3>Enlaces rápidos</h3>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="Productos.html">Productos</a></li>
+          <li><a href="https://www.instagram.com/cloffy.rd?igsh=NHowMG9nczYyeThj">Servicios</a></li>
+          <li><a href="https://wa.me/18292685367?text=Me%20interesa%20comprar%20algo%20que%20vi%20en%20su%20catalogo">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-section social">
+        <h3>Síguenos</h3>
+        <ul>
+          <li><a href="https://www.instagram.com/cloffy.rd?igsh=NHowMG9nczYyeThj" target="_blank">Instagram</a></li>
+          <li><a href="https://wa.me/18292685367?text=Me%20interesa%20comprar%20algo%20que%20vi%20en%20su%20catalogo" target="_blank">WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Cloffy Elegance & Style. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

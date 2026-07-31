@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Argollas | Cloffy.rd</title>
+  <meta name="description" content="Argollas de bisutería en Cloffy.rd, República Dominicana. Pide por WhatsApp.">
+  <link rel="stylesheet" href="CSS/Css.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <a href="index.html" class="brand">Cloffy<span>.rd</span></a>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Buscar argollas…">
+      <button onclick="searchProducts()">Buscar</button>
+    </div>
+  </header>
+
+  <nav class="site-nav">
+    <div class="nav-container">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="Productos.html">Productos</a></li>
+        <li class="dropdown">
+          <a href="#">Servicios</a>
+          <ul class="dropdown-content">
+            <li><a href="https://wa.me/18292685367?text=Me%20interesa%20comprar%20algo%20que%20vi%20en%20su%20catalogo">WhatsApp</a></li>
+            <li><a href="https://www.instagram.com/cloffy.rd?igsh=NHowMG9nczYyeThj">Instagram</a></li>
+          </ul>
+        </li>
+        <li><a href="https://wa.me/18292685367?text=Me%20interesa%20comprar%20algo%20que%20vi%20en%20su%20catalogo">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="cart-display" id="cartDisplay">
+    <h2>Tu carrito</h2>
+    <ul id="cartItems"></ul>
+    <p>Total: RD$<span id="totalAmount">0.00</span></p>
+    <button onclick="clearCart()">Vaciar carrito</button>
+  </div>
+
+  <button class="floating-cart" onclick="toggleCart()" aria-label="Abrir carrito">🛒</button>
+
+  <section class="section" style="padding-bottom:0;">
+    <span class="eyebrow">Categoría</span>
+    <h2>Argollas</h2>
+  </section>
+
+  <main id="productContainer">
+    <div class="card" data-name="Argollas" data-price="550">
+      <img src="IMG/Argollas/2.png" alt="Argollas">
+      <div class="card-body">
+        <h3>Argollas</h3>
+        <p class="price">RD$550.00</p>
+        <p class="desc">Diseño clásico.</p>
+        <button onclick="addToCart('Argollas', 550)">Agregar al carrito</button>
+      </div>
+    </div>
+    <div class="card" data-name="Argollas mariposa" data-price="550">
+      <img src="IMG/Argollas/3.png" alt="Argollas mariposa">
+      <div class="card-body">
+        <h3>Argollas mariposa</h3>
+        <p class="price">RD$550.00</p>
+        <p class="desc">Diseño de mariposas.</p>
+        <button onclick="addToCart('Argollas mariposa', 550)">Agregar al carrito</button>
+      </div>
+    </div>
+    <div class="card" data-name="Argollas flor blanco y negro" data-price="650">
+      <img src="IMG/Argollas/4.png" alt="Argollas flor blanco y negro">
+      <div class="card-body">
+        <h3>Argollas flor blanco y negro</h3>
+        <p class="price">RD$650.00</p>
+        <p class="desc">Diseño de flores blanco y negro.</p>
+        <button onclick="addToCart('Argollas flor blanco y negro', 650)">Agregar al carrito</button>
+      </div>
+    </div>
+    <div class="card" data-name="Argollas flor de colores" data-price="650">
+      <img src="IMG/Argollas/5.png" alt="Argollas flor de colores">
+      <div class="card-body">
+        <h3>Argollas flor de colores</h3>
+        <p class="price">RD$650.00</p>
+        <p class="desc">Diseño de flores de colores.</p>
+        <button onclick="addToCart('Argollas flor de colores', 650)">Agregar al carrito</button>
+      </div>
+    </div>
+    <div class="card" data-name="Argollas árbol dorado" data-price="650">
+      <img src="IMG/Argollas/6.png" alt="Argollas árbol dorado">
+      <div class="card-body">
+        <h3>Argollas árbol dorado</h3>
+        <p class="price">RD$650.00</p>
+        <p class="desc">Diseño de árbol dorado.</p>
+        <button onclick="addToCart('Argollas árbol dorado', 650)">Agregar al carrito</button>
+      </div>
+    </div>
+    <div class="card" data-name="Argollas con llave" data-price="650">
+      <img src="IMG/Argollas/7.png" alt="Argollas con llave">
+      <div class="card-body">
+        <h3>Argollas con llave</h3>
+        <p class="price">RD$650.00</p>
+        <p class="desc">Diseño de llave.</p>
+        <button onclick="addToCart('Argollas con llave', 650)">Agregar al carrito</button>
+      </div>
+    </div>
+    <div class="card" data-name="Argollas con llave" data-price="650">
+      <img src="IMG/Argollas/8.png" alt="Argollas con llave">
+      <div class="card-body">
+        <h3>Argollas con llave</h3>
+        <p class="price">RD$650.00</p>
+        <p class="desc">Diseño de llave.</p>
+        <button onclick="addToCart('Argollas con llave', 650)">Agregar al carrito</button>
+      </div>
+    </div>
+    <div class="card" data-name="Argollas con llave" data-price="650">
+      <img src="IMG/Argollas/9.png" alt="Argollas con llave">
+      <div class="card-body">
+        <h3>Argollas con llave</h3>
+        <p class="price">RD$650.00</p>
+        <p class="desc">Diseño de llave.</p>
+        <button onclick="addToCart('Argollas con llave', 650)">Agregar al carrito</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="JS/JS.JS"></script>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section about">
+        <h3>Cloffy Elegance & Style</h3>
+        <p class="slogan">"Viste tu esencia, adorna tu alma. Donde la moda se encuentra con la eternidad."</p>
+      </div>
+      <div class="footer-section links">
+        <h3>Enlaces rápidos</h3>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="Productos.html">Productos</a></li>
+          <li><a href="https://www.instagram.com/cloffy.rd?igsh=NHowMG9nczYyeThj">Servicios</a></li>
+          <li><a href="https://wa.me/18292685367?text=Me%20interesa%20comprar%20algo%20que%20vi%20en%20su%20catalogo">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-section social">
+        <h3>Síguenos</h3>
+        <ul>
+          <li><a href="https://www.instagram.com/cloffy.rd?igsh=NHowMG9nczYyeThj" target="_blank">Instagram</a></li>
+          <li><a href="https://wa.me/18292685367?text=Me%20interesa%20comprar%20algo%20que%20vi%20en%20su%20catalogo" target="_blank">WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Cloffy Elegance & Style. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

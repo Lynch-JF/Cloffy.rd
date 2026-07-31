@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sets | Cloffy.rd</title>
+  <meta name="description" content="Sets de bisutería en Cloffy.rd, República Dominicana. Pide por WhatsApp.">
+  <link rel="stylesheet" href="CSS/Css.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <a href="index.html" class="brand">Cloffy<span>.rd</span></a>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Buscar sets…">
+      <button onclick="searchProducts()">Buscar</button>
+    </div>
+  </header>
+
+  <nav class="site-nav">
+    <div class="nav-container">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="Productos.html">Productos</a></li>
+        <li class="dropdown">
+          <a href="#">Servicios</a>
+          <ul class="dropdown-content">
+            <li><a href="https://wa.me/18292685367?text=Me%20interesa%20comprar%20algo%20que%20vi%20en%20su%20catalogo">WhatsApp</a></li>
+            <li><a href="https://www.instagram.com/cloffy.rd?igsh=NHowMG9nczYyeThj">Instagram</a></li>
+          </ul>
+        </li>
+        <li><a href="https://wa.me/18292685367?text=Me%20interesa%20comprar%20algo%20que%20vi%20en%20su%20catalogo">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="cart-display" id="cartDisplay">
+    <h2>Tu carrito</h2>
+    <ul id="cartItems"></ul>
+    <p>Total: RD$<span id="totalAmount">0.00</span></p>
+    <button onclick="clearCart()">Vaciar carrito</button>
+  </div>
+
+  <button class="floating-cart" onclick="toggleCart()" aria-label="Abrir carrito">🛒</button>
+
+  <section class="section" style="padding-bottom:0;">
+    <span class="eyebrow">Categoría</span>
+    <h2>Sets</h2>
+  </section>
+
+  <main id="productContainer">
+    <div class="card" data-name="Set" data-price="550">
+      <img src="IMG/Sets/1.jpg" alt="Set">
+      <div class="card-body">
+        <h3>Set</h3>
+        <p class="price">RD$550.00</p>
+        <p class="desc">Set de bisutería.</p>
+        <button onclick="addToCart('Set', 550)">Agregar al carrito</button>
+      </div>
+    </div>
+    <div class="card" data-name="Set" data-price="550">
+      <img src="IMG/Sets/2.jpg" alt="Set">
+      <div class="card-body">
+        <h3>Set</h3>
+        <p class="price">RD$550.00</p>
+        <p class="desc">Set de bisutería.</p>
+        <button onclick="addToCart('Set', 550)">Agregar al carrito</button>
+      </div>
+    </div>
+    <div class="card" data-name="Set" data-price="550">
+      <img src="IMG/Sets/3.jpg" alt="Set">
+      <div class="card-body">
+        <h3>Set</h3>
+        <p class="price">RD$550.00</p>
+        <p class="desc">Set de bisutería.</p>
+        <button onclick="addToCart('Set', 550)">Agregar al carrito</button>
+      </div>
+    </div>
+    <div class="card" data-name="Set" data-price="550">
+      <img src="IMG/Sets/4.jpg" alt="Set">
+      <div class="card-body">
+        <h3>Set</h3>
+        <p class="price">RD$550.00</p>
+        <p class="desc">Set de bisutería.</p>
+        <button onclick="addToCart('Set', 550)">Agregar al carrito</button>
+      </div>
+    </div>
+    <div class="card" data-name="Set aretes y cadena" data-price="450">
+      <img src="IMG/Sets/5.png" alt="Set aretes y cadena">
+      <div class="card-body">
+        <h3>Set aretes y cadena</h3>
+        <p class="price">RD$450.00</p>
+        <p class="desc">Aretes y cadena a juego.</p>
+        <button onclick="addToCart('Set aretes y cadena', 450)">Agregar al carrito</button>
+      </div>
+    </div>
+    <div class="card" data-name="Set aretes y cadena" data-price="650">
+      <img src="IMG/Sets/6.png" alt="Set aretes y cadena">
+      <div class="card-body">
+        <h3>Set aretes y cadena</h3>
+        <p class="price">RD$650.00</p>
+        <p class="desc">Aretes y cadena a juego.</p>
+        <button onclick="addToCart('Set aretes y cadena', 650)">Agregar al carrito</button>
+      </div>
+    </div>
+    <div class="card" data-name="Set aretes y cadena" data-price="650">
+      <img src="IMG/Sets/7.png" alt="Set aretes y cadena">
+      <div class="card-body">
+        <h3>Set aretes y cadena</h3>
+        <p class="price">RD$650.00</p>
+        <p class="desc">Aretes y cadena a juego.</p>
+        <button onclick="addToCart('Set aretes y cadena', 650)">Agregar al carrito</button>
+      </div>
+    </div>
+    <div class="card" data-name="Set aretes y cadena de perlas" data-price="650">
+      <img src="IMG/Sets/8.png" alt="Set aretes y cadena de perlas">
+      <div class="card-body">
+        <h3>Set aretes y cadena de perlas</h3>
+        <p class="price">RD$650.00</p>
+        <p class="desc">Aretes y cadena de perlas.</p>
+        <button onclick="addToCart('Set aretes y cadena de perlas', 650)">Agregar al carrito</button>
+      </div>
+    </div>
+    <div class="card" data-name="Set 2 collares y aretes de perla" data-price="650">
+      <img src="IMG/Sets/9.png" alt="Set 2 collares y aretes de perla">
+      <div class="card-body">
+        <h3>Set 2 collares y aretes de perla</h3>
+        <p class="price">RD$650.00</p>
+        <p class="desc">2 collares y un par de aretes de perla.</p>
+        <button onclick="addToCart('Set 2 collares y aretes de perla', 650)">Agregar al carrito</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="JS/JS.JS"></script>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section about">
+        <h3>Cloffy Elegance & Style</h3>
+        <p class="slogan">"Viste tu esencia, adorna tu alma. Donde la moda se encuentra con la eternidad."</p>
+      </div>
+      <div class="footer-section links">
+        <h3>Enlaces rápidos</h3>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="Productos.html">Productos</a></li>
+          <li><a href="https://www.instagram.com/cloffy.rd?igsh=NHowMG9nczYyeThj">Servicios</a></li>
+          <li><a href="https://wa.me/18292685367?text=Me%20interesa%20comprar%20algo%20que%20vi%20en%20su%20catalogo">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-section social">
+        <h3>Síguenos</h3>
+        <ul>
+          <li><a href="https://www.instagram.com/cloffy.rd?igsh=NHowMG9nczYyeThj" target="_blank">Instagram</a></li>
+          <li><a href="https://wa.me/18292685367?text=Me%20interesa%20comprar%20algo%20que%20vi%20en%20su%20catalogo" target="_blank">WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Cloffy Elegance & Style. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadenas | Cloffy.rd</title>
+  <meta name="description" content="Cadenas de bisutería en Cloffy.rd, República Dominicana. Pide por WhatsApp.">
+  <link rel="stylesheet" href="CSS/Css.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <a href="index.html" class="brand">Cloffy<span>.rd</span></a>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Buscar cadenas…">
+      <button onclick="searchProducts()">Buscar</button>
+    </div>
+  </header>
+
+  <nav class="site-nav">
+    <div class="nav-container">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="Productos.html">Productos</a></li>
+        <li class="dropdown">
+          <a href="#">Servicios</a>
+          <ul class="dropdown-content">
+            <li><a href="https://wa.me/18292685367?text=Me%20interesa%20comprar%20algo%20que%20vi%20en%20su%20catalogo">WhatsApp</a></li>
+            <li><a href="https://www.instagram.com/cloffy.rd?igsh=NHowMG9nczYyeThj">Instagram</a></li>
+          </ul>
+        </li>
+        <li><a href="https://wa.me/18292685367?text=Me%20interesa%20comprar%20algo%20que%20vi%20en%20su%20catalogo">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="cart-display" id="cartDisplay">
+    <h2>Tu carrito</h2>
+    <ul id="cartItems"></ul>
+    <p>Total: RD$<span id="totalAmount">0.00</span></p>
+    <button onclick="clearCart()">Vaciar carrito</button>
+  </div>
+
+  <button class="floating-cart" onclick="toggleCart()" aria-label="Abrir carrito">🛒</button>
+
+  <section class="section" style="padding-bottom:0;">
+    <span class="eyebrow">Categoría</span>
+    <h2>Cadenas</h2>
+  </section>
+
+  <main id="productContainer">
+    <div class="card" data-name="Cadenas" data-price="400">
+      <img src="IMG/Cadenas/1.jpg" alt="Cadenas">
+      <div class="card-body">
+        <h3>Cadenas</h3>
+        <p class="price">RD$400.00</p>
+        <p class="desc">Cadenas con diferentes diseños.</p>
+        <button onclick="addToCart('Cadenas', 400)">Agregar al carrito</button>
+      </div>
+    </div>
+    <div class="card" data-name="Cadenas forma de corazón" data-price="400">
+      <img src="IMG/Cadenas/4.png" alt="Cadenas forma de corazón">
+      <div class="card-body">
+        <h3>Cadenas forma de corazón</h3>
+        <p class="price">RD$400.00</p>
+        <p class="desc">Diseño en forma de corazón.</p>
+        <button onclick="addToCart('Cadenas forma de corazón', 400)">Agregar al carrito</button>
+      </div>
+    </div>
+    <div class="card" data-name="Cadenas plateadas" data-price="400">
+      <img src="IMG/Cadenas/2.jpg" alt="Cadenas plateadas">
+      <div class="card-body">
+        <h3>Cadenas plateadas</h3>
+        <p class="price">RD$400.00</p>
+        <p class="desc">Diseño trébol plateado.</p>
+        <button onclick="addToCart('Cadenas plateadas', 400)">Agregar al carrito</button>
+      </div>
+    </div>
+    <div class="card" data-name="Cadenas" data-price="400">
+      <img src="IMG/Cadenas/3.jpg" alt="Cadenas">
+      <div class="card-body">
+        <h3>Cadenas</h3>
+        <p class="price">RD$400.00</p>
+        <p class="desc">Diseño trébol.</p>
+        <button onclick="addToCart('Cadenas', 400)">Agregar al carrito</button>
+      </div>
+    </div>
+    <div class="card" data-name="Cadenas" data-price="400">
+      <img src="IMG/Cadenas/5.png" alt="Cadenas">
+      <div class="card-body">
+        <h3>Cadenas</h3>
+        <p class="price">RD$400.00</p>
+        <p class="desc">Diseño trébol.</p>
+        <button onclick="addToCart('Cadenas', 400)">Agregar al carrito</button>
+      </div>
+    </div>
+    <div class="card" data-name="Cadenas" data-price="300">
+      <img src="IMG/Cadenas/6.png" alt="Cadenas">
+      <div class="card-body">
+        <h3>Cadenas</h3>
+        <p class="price">RD$300.00</p>
+        <p class="desc">Diseño trébol.</p>
+        <button onclick="addToCart('Cadenas', 300)">Agregar al carrito</button>
+      </div>
+    </div>
+    <div class="card" data-name="Cadenas" data-price="300">
+      <img src="IMG/Cadenas/7.png" alt="Cadenas">
+      <div class="card-body">
+        <h3>Cadenas</h3>
+        <p class="price">RD$300.00</p>
+        <p class="desc">Diseño trébol.</p>
+        <button onclick="addToCart('Cadenas', 300)">Agregar al carrito</button>
+      </div>
+    </div>
+    <div class="card" data-name="Cadenas" data-price="300">
+      <img src="IMG/Cadenas/8.png" alt="Cadenas">
+      <div class="card-body">
+        <h3>Cadenas</h3>
+        <p class="price">RD$300.00</p>
+        <p class="desc">Diseño trébol.</p>
+        <button onclick="addToCart('Cadenas', 300)">Agregar al carrito</button>
+      </div>
+    </div>
+    <div class="card" data-name="Cadenas" data-price="300">
+      <img src="IMG/Cadenas/10.png" alt="Cadenas">
+      <div class="card-body">
+        <h3>Cadenas</h3>
+        <p class="price">RD$300.00</p>
+        <p class="desc">Diseño trébol.</p>
+        <button onclick="addToCart('Cadenas', 300)">Agregar al carrito</button>
+      </div>
+    </div>
+    <div class="card" data-name="Cadenas" data-price="300">
+      <img src="IMG/Cadenas/11.png" alt="Cadenas">
+      <div class="card-body">
+        <h3>Cadenas</h3>
+        <p class="price">RD$300.00</p>
+        <p class="desc">Diseño trébol.</p>
+        <button onclick="addToCart('Cadenas', 300)">Agregar al carrito</button>
+      </div>
+    </div>
+    <div class="card" data-name="Cadenas doradas" data-price="300">
+      <img src="IMG/Cadenas/12.png" alt="Cadenas doradas">
+      <div class="card-body">
+        <h3>Cadenas doradas</h3>
+        <p class="price">RD$300.00</p>
+        <p class="desc">Diseño trébol.</p>
+        <button onclick="addToCart('Cadenas doradas', 300)">Agregar al carrito</button>
+      </div>
+    </div>
+    <div class="card" data-name="Cadenas letra J" data-price="300">
+      <img src="IMG/Cadenas/13.png" alt="Cadenas letra J">
+      <div class="card-body">
+        <h3>Cadenas letra J</h3>
+        <p class="price">RD$300.00</p>
+        <p class="desc">Cadena con letra J.</p>
+        <button onclick="addToCart('Cadenas letra J', 300)">Agregar al carrito</button>
+      </div>
+    </div>
+    <div class="card" data-name="Cadenas letra E" data-price="300">
+      <img src="IMG/Cadenas/14.png" alt="Cadenas letra E">
+      <div class="card-body">
+        <h3>Cadenas letra E</h3>
+        <p class="price">RD$300.00</p>
+        <p class="desc">Cadena con letra E.</p>
+        <button onclick="addToCart('Cadenas letra E', 300)">Agregar al carrito</button>
+      </div>
+    </div>
+    <div class="card" data-name="Cadenas letra B" data-price="300">
+      <img src="IMG/Cadenas/15.png" alt="Cadenas letra B">
+      <div class="card-body">
+        <h3>Cadenas letra B</h3>
+        <p class="price">RD$300.00</p>
+        <p class="desc">Cadena con letra B.</p>
+        <button onclick="addToCart('Cadenas letra B', 300)">Agregar al carrito</button>
+      </div>
+    </div>
+    <div class="card" data-name="Cadenas letra B" data-price="300">
+      <img src="IMG/Cadenas/16.jpg" alt="Cadenas letra B">
+      <div class="card-body">
+        <h3>Cadenas letra B</h3>
+        <p class="price">RD$300.00</p>
+        <p class="desc">Cadena con letra B.</p>
+        <button onclick="addToCart('Cadenas letra B', 300)">Agregar al carrito</button>
+      </div>
+    </div>
+    <div class="card" data-name="Cadenas letra B" data-price="300">
+      <img src="IMG/Cadenas/17.png" alt="Cadenas letra B">
+      <div class="card-body">
+        <h3>Cadenas letra B</h3>
+        <p class="price">RD$300.00</p>
+        <p class="desc">Cadena con letra B.</p>
+        <button onclick="addToCart('Cadenas letra B', 300)">Agregar al carrito</button>
+      </div>
+    </div>
+    <div class="card" data-name="Cadenas letra B" data-price="300">
+      <img src="IMG/Cadenas/18.png" alt="Cadenas letra B">
+      <div class="card-body">
+        <h3>Cadenas letra B</h3>
+        <p class="price">RD$300.00</p>
+        <p class="desc">Cadena con letra B.</p>
+        <button onclick="addToCart('Cadenas letra B', 300)">Agregar al carrito</button>
+      </div>
+    </div>
+    <div class="card" data-name="Cadenas letra B" data-price="300">
+      <img src="IMG/Cadenas/19.png" alt="Cadenas letra B">
+      <div class="card-body">
+        <h3>Cadenas letra B</h3>
+        <p class="price">RD$300.00</p>
+        <p class="desc">Cadena con letra B.</p>
+        <button onclick="addToCart('Cadenas letra B', 300)">Agregar al carrito</button>
+      </div>
+    </div>
+    <div class="card" data-name="Cadenas letra B" data-price="300">
+      <img src="IMG/Cadenas/20.png" alt="Cadenas letra B">
+      <div class="card-body">
+        <h3>Cadenas letra B</h3>
+        <p class="price">RD$300.00</p>
+        <p class="desc">Cadena con letra B.</p>
+        <button onclick="addToCart('Cadenas letra B', 300)">Agregar al carrito</button>
+      </div>
+    </div>
+    <div class="card" data-name="Cadenas letra B" data-price="300">
+      <img src="IMG/Cadenas/21.png" alt="Cadenas letra B">
+      <div class="card-body">
+        <h3>Cadenas letra B</h3>
+        <p class="price">RD$300.00</p>
+        <p class="desc">Cadena con letra B.</p>
+        <button onclick="addToCart('Cadenas letra B', 300)">Agregar al carrito</button>
+      </div>
+    </div>
+    <div class="card" data-name="Cadenas letra B" data-price="300">
+      <img src="IMG/Cadenas/22.png" alt="Cadenas letra B">
+      <div class="card-body">
+        <h3>Cadenas letra B</h3>
+        <p class="price">RD$300.00</p>
+        <p class="desc">Cadena con letra B.</p>
+        <button onclick="addToCart('Cadenas letra B', 300)">Agregar al carrito</button>
+      </div>
+    </div>
+    <div class="card" data-name="Cadenas letra B" data-price="300">
+      <img src="IMG/Cadenas/23.png" alt="Cadenas letra B">
+      <div class="card-body">
+        <h3>Cadenas letra B</h3>
+        <p class="price">RD$300.00</p>
+        <p class="desc">Cadena con letra B.</p>
+        <button onclick="addToCart('Cadenas letra B', 300)">Agregar al carrito</button>
+      </div>
+    </div>
+    <div class="card" data-name="Cadenas letra B" data-price="300">
+      <img src="IMG/Cadenas/24.png" alt="Cadenas letra B">
+      <div class="card-body">
+        <h3>Cadenas letra B</h3>
+        <p class="price">RD$300.00</p>
+        <p class="desc">Cadena con letra B.</p>
+        <button onclick="addToCart('Cadenas letra B', 300)">Agregar al carrito</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="JS/JS.JS"></script>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section about">
+        <h3>Cloffy Elegance & Style</h3>
+        <p class="slogan">"Viste tu esencia, adorna tu alma. Donde la moda se encuentra con la eternidad."</p>
+      </div>
+      <div class="footer-section links">
+        <h3>Enlaces rápidos</h3>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="Productos.html">Productos</a></li>
+          <li><a href="https://www.instagram.com/cloffy.rd?igsh=NHowMG9nczYyeThj">Servicios</a></li>
+          <li><a href="https://wa.me/18292685367?text=Me%20interesa%20comprar%20algo%20que%20vi%20en%20su%20catalogo">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-section social">
+        <h3>Síguenos</h3>
+        <ul>
+          <li><a href="https://www.instagram.com/cloffy.rd?igsh=NHowMG9nczYyeThj" target="_blank">Instagram</a></li>
+          <li><a href="https://wa.me/18292685367?text=Me%20interesa%20comprar%20algo%20que%20vi%20en%20su%20catalogo" target="_blank">WhatsApp</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Cloffy Elegance & Style. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
