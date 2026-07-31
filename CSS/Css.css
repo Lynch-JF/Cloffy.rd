@@ -458,6 +458,22 @@ main,
 .card button:hover,
 .card .btn-add:hover { background-color: var(--brass-dark); }
 
+.card .btn-whatsapp {
+  background-color: var(--success);
+}
+.card .btn-whatsapp:hover {
+  background-color: #3d6249;
+}
+
+/* ==========================================================================
+   CATÁLOGO — grid de categorías (usado en Productos.html)
+   ========================================================================== */
+.catalog-rail {
+  max-width: var(--max-width);
+  margin: 32px auto;
+  padding: 0 32px 64px;
+}
+
 /* ==========================================================================
    CART
    ========================================================================== */
