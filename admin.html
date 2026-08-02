@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel de Administración | Cloffy.rd</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="CSS/Css.css">
+  <style>
+    .admin-wrap { max-width: 900px; margin: 40px auto; padding: 0 24px 80px; }
+    .admin-card {
+      background: var(--paper, #FBF8F3);
+      border: 1px solid var(--line, rgba(0,0,0,0.12));
+      border-radius: 4px;
+      padding: 28px;
+      margin-bottom: 28px;
+    }
+    .admin-card h2 { margin-bottom: 6px; }
+    .field { margin-bottom: 16px; }
+    .field label { display: block; font-weight: 600; font-size: 0.85rem; margin-bottom: 6px; }
+    .field input[type=text], .field input[type=number], .field select, .field textarea {
+      width: 100%; padding: 9px 10px; border: 1px solid #ccc; border-radius: 3px; font-family: inherit; font-size: 0.9rem;
+    }
+    .field textarea { resize: vertical; min-height: 60px; }
+    .field small { display:block; color:#777; font-size:0.78rem; margin-top:4px; }
+    .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    #preview { max-width: 160px; max-height: 160px; display: none; margin-top: 10px; border: 1px solid #ccc; border-radius: 3px; }
+    table.draft { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 0.85rem; }
+    table.draft th, table.draft td { border-bottom: 1px solid #e2ddd2; padding: 8px 6px; text-align: left; vertical-align: middle; }
+    table.draft img { width: 48px; height: 48px; object-fit: cover; border-radius: 3px; }
+    .btn { display:inline-block; padding:10px 18px; border:none; border-radius:3px; cursor:pointer; font-size:0.85rem; font-weight:600; }
+    .btn-primary { background: var(--onyx, #2A1810); color:#fff; }
+    .btn-danger { background:#a33; color:#fff; }
+    .btn-secondary { background:#e5ded0; color:#2A1810; }
+    .locked, .unlocked { display: none; }
+    .alert { background:#fff3cd; border:1px solid #ffe08a; padding:12px 16px; border-radius:4px; font-size:0.85rem; margin-bottom:20px; }
+    .checklist { background:#eef5ee; border:1px solid #cfe3cf; padding:16px 20px; border-radius:4px; font-size:0.85rem; }
+    .checklist li { margin-bottom:6px; }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <a href="index.html" class="brand">Cloffy<span>.rd</span></a>
+  </header>
+
+  <div class="admin-wrap">
+
+    <!-- ===================== LOGIN ===================== -->
+    <div id="loginBox" class="admin-card locked" style="display:block;">
+      <h2>Panel de Administración</h2>
+      <p style="color:#777; font-size:0.85rem; margin-bottom:16px;">Acceso solo para la persona encargada de subir mercancía.</p>
+      <div class="field">
+        <label for="pass">Clave de acceso</label>
+        <input type="password" id="pass" placeholder="Escribe la clave">
+      </div>
+      <button class="btn btn-primary" onclick="intentarEntrar()">Entrar</button>
+      <p id="loginError" style="color:#a33; font-size:0.85rem; margin-top:10px; display:none;">Clave incorrecta.</p>
+      <p style="font-size:0.75rem; color:#999; margin-top:16px;">
+        Nota: esta clave solo bloquea la pantalla en este navegador — no es seguridad real.
+        Cuando pasemos a Supabase/Railway se reemplaza por un login de verdad.
+      </p>
+    </div>
+
+    <!-- ===================== PANEL ===================== -->
+    <div id="panel" class="unlocked">
+
+      <div class="alert">
+        <strong>Cómo funciona esta versión:</strong> todavía no hay servidor conectado, así que lo que agregues aquí
+        se guarda solo en este navegador. Cuando termines de cargar productos, el botón de abajo te da los archivos
+        listos para subir a GitHub (igual que has estado haciendo). Cuando conectemos Cloudinary/Supabase, esta
+        pantalla queda igual — solo cambia a dónde se manda la imagen.
+      </div>
+
+      <div class="admin-card">
+        <h2>Agregar mercancía</h2>
+        <div class="field">
+          <label>Categoría</label>
+          <select id="categoria">
+            <option value="">Cargando categorías…</option>
+          </select>
+          <small>¿Categoría nueva? Escríbela abajo (además hay que agregar el enlace en Productos.html a mano — avísame).</small>
+        </div>
+        <div class="field">
+          <input type="text" id="categoriaNueva" placeholder="O escribe una categoría nueva aquí">
+        </div>
+        <div class="row2">
+          <div class="field">
+            <label>Nombre del producto</label>
+            <input type="text" id="nombre" placeholder="Ej: Pulsera trébol dorado">
+          </div>
+          <div class="field">
+            <label>Precio (RD$)</label>
+            <input type="number" id="precio" placeholder="Déjalo vacío si es 'Precio a consultar'">
+          </div>
+        </div>
+        <div class="field">
+          <label>Descripción corta</label>
+          <textarea id="descripcion" placeholder="Ej: Diseño de trébol, acabado dorado."></textarea>
+        </div>
+        <div class="field">
+          <label>Foto del producto</label>
+          <input type="file" id="imagen" accept="image/*" onchange="previsualizar()">
+          <img id="preview">
+        </div>
+        <button class="btn btn-primary" onclick="agregarBorrador()">Agregar a la lista</button>
+      </div>
+
+      <div class="admin-card">
+        <h2>Pendientes por publicar (<span id="conteo">0</span>)</h2>
+        <table class="draft" id="tablaDraft">
+          <thead><tr><th>Foto</th><th>Categoría</th><th>Nombre</th><th>Precio</th><th></th></tr></thead>
+          <tbody></tbody>
+        </table>
+        <p id="vacioMsg" style="color:#999; font-size:0.85rem;">Todavía no has agregado nada.</p>
+      </div>
+
+      <div class="admin-card">
+        <h2>Publicar</h2>
+        <p style="font-size:0.85rem; color:#555; margin-bottom:14px;">
+          Esto descarga cada imagen (ya renombrada) y el <code>productos.json</code> actualizado.
+        </p>
+        <button class="btn btn-secondary" onclick="descargarTodo()">Descargar imágenes + productos.json</button>
+        <button class="btn btn-danger" style="margin-left:10px;" onclick="vaciarLista()">Vaciar lista</button>
+
+        <div class="checklist" style="margin-top:20px;">
+          <strong>Pasos para que se vea en la página real:</strong>
+          <ol>
+            <li>Sube cada imagen descargada a <code>IMG/&lt;Categoría&gt;/</code> en GitHub, con el mismo nombre que trae.</li>
+            <li>Reemplaza <code>productos.json</code> en la raíz del repo con el que se descargó.</li>
+            <li>Espera unos segundos — Vercel redeploya solo.</li>
+          </ol>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="JS/admin.js"></script>
+</body>
+</html>
